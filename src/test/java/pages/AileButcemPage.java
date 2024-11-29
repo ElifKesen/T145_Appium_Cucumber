@@ -31,6 +31,18 @@ public class AileButcemPage {
     @FindBy(xpath = "(//*[@class='android.widget.EditText'])[2]")
     public MobileElement sifreKutusu;
 
+    @FindBy(xpath = "(//*[@class='android.widget.TextView'])[2]")
+    public MobileElement girisYapButonu;
+
+    @FindBy(xpath = "//*[@text='Başarıyla giriş yapıldı.']")
+    public MobileElement girisYazisiDogrulama;
+
+    @FindBy(xpath = "(//*[@class='android.widget.ImageView'])[1]")
+    public MobileElement HamburgerButonu;
+
+    @FindBy(xpath = "(//*[@class='android.widget.ImageView'])[2]")
+    public MobileElement hesabimButonu;
+
 
 
 

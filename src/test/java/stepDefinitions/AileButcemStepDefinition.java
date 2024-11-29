@@ -1,7 +1,12 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
 import pages.AileButcemPage;
+import utilities.ConfigReader;
+import utilities.ReusableMethods;
+
+import java.util.Random;
 
 public class AileButcemStepDefinition {
     AileButcemPage page=new AileButcemPage();
@@ -13,15 +18,23 @@ public class AileButcemStepDefinition {
 
     }
     @Given("{string} ve {string} bilgilerini girerek kullanici bilgileriyle {string}")
-    public void ve_bilgilerini_girerek_kullanici_bilgileriyle(String string, String string2, String string3) {
-
+    public void ve_bilgilerini_girerek_kullanici_bilgileriyle(String mail, String password, String girisYap) throws InterruptedException {
+        page.emailKutusu.sendKeys(ConfigReader.getProperty(mail));
+        Thread.sleep(2000);
+        page.sifreKutusu.sendKeys(ConfigReader.getProperty(password));
+        Thread.sleep(2000);
+        page.girisYapButonu.click();
     }
     @Given("uygulamaya kullanici bilgileriyle giris yapildigini dogrulayin")
-    public void uygulamaya_kullanici_bilgileriyle_giris_yapildigini_dogrulayin() {
-
+    public void uygulamaya_kullanici_bilgileriyle_giris_yapildigini_dogrulayin() throws InterruptedException {
+        Assert.assertTrue(page.girisYazisiDogrulama.isDisplayed());
+        Thread.sleep(2000);
     }
     @Given("sol kisimdaki menuden {string} bolumune gidin")
-    public void sol_kisimdaki_menuden_bolumune_gidin(String string) {
+    public void sol_kisimdaki_menuden_bolumune_gidin(String hesap) {
+        page.HamburgerButonu.click();
+        page.hesabimButonu.click();
+       // ReusableMethods.scrollWithUiScrollableAndClick(hesap);
 
     }
     @Given("hesabim sayfasindaki bilgileri degistirerek {string} {string} {string} {string} {string} ve cinsiyet {string} degisikleri kaydedin ve değişikleri dogrulayin")
