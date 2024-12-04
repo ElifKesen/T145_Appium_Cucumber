@@ -39,6 +39,7 @@ public class BrowserDriver {
 
             caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
            //caps.setCapability("chromedriverExecutable","C:\\Users\\elifk\\IdeaProjects\\T145_Appium_Cucumber\\Driver\\chromedriver.exe");
+            //Eger browserName ile test calismazsa 41. satirdaki caps i de yorumdan cikararak 40 ve 41. satirlari ikisini birlikte kullaniyoruz
 
 
             caps.setCapability(MobileCapabilityType.NO_RESET,false);
