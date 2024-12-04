@@ -38,7 +38,7 @@ public class BrowserDriver {
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, OTOMASYON_ISMI);
 
             caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
-            //caps.setCapability("chromedriverExecutable","C:\\Users\\elifk\\IdeaProjects\\T145_Appium_Cucumber\\Driver\\chromedriver.exe");
+           //caps.setCapability("chromedriverExecutable","C:\\Users\\elifk\\IdeaProjects\\T145_Appium_Cucumber\\Driver\\chromedriver.exe");
 
 
             caps.setCapability(MobileCapabilityType.NO_RESET,false);

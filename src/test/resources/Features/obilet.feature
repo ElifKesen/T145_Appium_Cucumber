@@ -1,5 +1,5 @@
 Feature: Kullanici obilet sayfasindaki gorevleri yapar
-  @browser
+
   Scenario: Kullanici obilet sayfasina gider
     Given "ObiletURL" sayfasina gider
     When Dil türkce secilir
